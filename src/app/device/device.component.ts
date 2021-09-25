@@ -5,6 +5,7 @@ import { FilterPipe } from '../pipes/filter.pipe';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-device',
@@ -29,5 +30,10 @@ export class DeviceComponent implements OnInit {
 
   getDevices(): void {
     this.deviceService.getDevices().subscribe(devices => this.devices = devices);
+  }
+
+  clearSearchText(): void {
+    this.searchText = "";
+    
   }
 }

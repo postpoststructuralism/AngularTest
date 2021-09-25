@@ -6,16 +6,19 @@
     <div class="grey-background add-border search-container">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-10 white-background">
-                    <span class=""><fa-icon [icon]="faSearch"></fa-icon></span>
-                    <span class="form-group">
-                        <input type="search" [(ngModel)]="searchText" class="no-border no-outline">
-                    </span>
+                <div class="col-11">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><fa-icon [icon]="faSearch"></fa-icon></span>
+                            </div>
+                            <input id="searchBox" type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search">
+                         </div>
+                       </div>
                 </div>
-                
                 <div class="col-1">
                     <span class="ms-auto">
-                        <a href="#">Cancel</a>
+                        <a (click)="clearSearchText()">Cancel</a>
                     </span>
                 </div>
             </div>

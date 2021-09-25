@@ -16,6 +16,7 @@
 
 .no-outline:focus {
     outline: none;
+    max-width: 100%;
 }
 
 .add-border {
@@ -40,4 +41,8 @@
 
 .search-container > div {
     margin: 10px;
+}
+
+input {
+    max-width:100%;
 }
