@@ -9,3 +9,35 @@
 .text-right {
     float: right;
 }
+
+.no-border {
+    border: hidden;
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+.add-border {
+    border: solid;
+    border-width: thin;
+}
+
+.white-background {
+    background-color: rgb(255, 255, 255);
+}
+
+.grey-background {
+    background-color: rgb(188, 192, 197);
+}
+
+.flex-gap > div {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border: solid;
+    border-width: thin;
+}
+
+.search-container > div {
+    margin: 10px;
+}

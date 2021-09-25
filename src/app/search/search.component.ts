@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { ActivatedRoute } from '@angular/router';
 // import { Location } from '@angular/common';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FilterPipe } from '../pipes/filter.pipe';
 
 @Component({
   selector: 'app-search',
@@ -10,10 +11,12 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 })
 export class SearchComponent implements OnInit {
   faSearch = faSearch;
+  searchText = '';
 
   //private location : Location;
 
-  constructor() { }
+  constructor(
+    private filterPipe: FilterPipe) { }
 
   ngOnInit(): void {
   }

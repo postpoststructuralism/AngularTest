@@ -21,7 +21,7 @@ export class FilterPipe implements PipeTransform {
     
     return items.filter(function(device)  {
       var deviceName: string = device.name.toLocaleLowerCase();
-      
+
       return deviceName.includes(searchText);
     });
   }

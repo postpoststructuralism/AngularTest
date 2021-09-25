@@ -1,22 +1,42 @@
-<app-search></app-search>
+<!-- <app-search></app-search> -->
+<br/>
 <div class="container-fluid devices">
 
     <!-- TODO: move this to the actual search component-->
-    <div class="form-group">
-        <input type="text" [(ngModel)]="searchText" placeholder="Enter text to search">
-    </div>
-    
-    <div *ngFor="let device of devices | appFilter: searchText">
-        <a routerLink="/detail/{{device.id}}">
-            <div class="d-flex flex-row alert alert-primary">
-                <div class="px-2 pt-2"><fa-icon [icon]="faMobileAlt" size="2x"></fa-icon></div>
-                <div class="px-2">
-                    <div>{{device.name}}</div>
-                    <div>{{device.status}}</div>
+    <div class="grey-background add-border search-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-10 white-background">
+                    <span class=""><fa-icon [icon]="faSearch"></fa-icon></span>
+                    <span class="form-group">
+                        <input type="search" [(ngModel)]="searchText" class="no-border no-outline">
+                    </span>
                 </div>
-                <div class="ms-auto px-2 pt-2"><fa-icon [icon]="faInfoCircle" size="lg"></fa-icon></div>
+                
+                <div class="col-1">
+                    <span class="ms-auto">
+                        <a href="#">Cancel</a>
+                    </span>
+                </div>
             </div>
-        </a>
-        
+        </div>
+    </div>   
+    
+    <br/>
+
+    <div class=" flex-gap">    
+        <div *ngFor="let device of devices | appFilter: searchText">
+            <div routerLink="/detail/{{device.id}}">
+                
+                    <div class="d-flex flex-row grey-background">
+                        <div class="p-2"><fa-icon [icon]="faMobileAlt" size="2x"></fa-icon></div>
+                        <div class="p-2">
+                            <div>{{device.name}}</div>
+                            <div>Status: {{device.status}}</div>
+                        </div>
+                        <div class="ms-auto p-2"><fa-icon [icon]="faInfoCircle" size="lg"></fa-icon></div>
+                    </div>
+            </div>   
+        </div>
     </div>
 </div>

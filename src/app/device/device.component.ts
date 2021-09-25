@@ -4,6 +4,7 @@ import { DeviceService } from '../device.service';
 import { FilterPipe } from '../pipes/filter.pipe';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-device',
@@ -15,6 +16,7 @@ export class DeviceComponent implements OnInit {
   devices: Device[] = [];
   faInfoCircle = faInfoCircle;
   faMobileAlt = faMobileAlt;
+  faSearch = faSearch;
   searchText = '';
 
   constructor(
