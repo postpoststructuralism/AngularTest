@@ -1,6 +1,12 @@
 <app-search></app-search>
 <div class="container-fluid devices">
-    <div *ngFor="let device of devices">
+
+    <!-- TODO: move this to the actual search component-->
+    <div class="form-group">
+        <input type="text" [(ngModel)]="searchText" placeholder="Enter text to search">
+    </div>
+    
+    <div *ngFor="let device of devices | appFilter: searchText">
         <a routerLink="/detail/{{device.id}}">
             <div class="d-flex flex-row alert alert-primary">
                 <div class="px-2 pt-2"><fa-icon [icon]="faMobileAlt" size="2x"></fa-icon></div>
