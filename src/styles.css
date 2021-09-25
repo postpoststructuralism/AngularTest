@@ -1,2 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+.no-border {
+    border: hidden;
+}
+
+.no-outline:focus {
+    outline: none;
+    max-width: 100%;
+}
+
+.add-border {
+    border: solid;
+    border-width: thin;
+}
+
+.white-background {
+    background-color: rgb(255, 255, 255);
+}
+
+.grey-background {
+    background-color: rgb(188, 192, 197);
+}
+
+.flex-gap > div {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border: solid;
+    border-width: thin;
+}
+
+.search-container > div {
+    margin: 10px;
+}
+
+input {
+    max-width:100%;
+}

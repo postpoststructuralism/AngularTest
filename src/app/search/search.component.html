@@ -1,12 +1,21 @@
 <div class="container-fluid">
-    <div class="d-flex flex-row">
-        <div class="p-2"><fa-icon [icon]="faSearch" (click)="onReload()"></fa-icon></div>
-        <div class="p-2">
-            <!-- <input type="search" id="site-search"> -->
-            <div class="form-group">
-                <input type="text" [(ngModel)]="searchText" placeholder="Enter text to search">
+    <div class="grey-background add-border search-container">
+        <div class="row">
+            <div class="col-10">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><fa-icon [icon]="faSearch"></fa-icon></span>
+                        </div>
+                        <input id="searchBox" type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search">
+                    </div>
+                </div>
+            </div>
+            <div class="col-1">
+                <span class="">
+                    <a >Cancel</a>
+                </span>
             </div>
         </div>
-        <div class="p-2"><span (click)="onCancel()">Cancel</span></div>
     </div>
-</div>
+</div>   
