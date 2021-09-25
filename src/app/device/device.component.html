@@ -1,6 +1,20 @@
 <app-search></app-search>
 <div class="container-fluid devices">
-    <ul class="list-group">
+    <div *ngFor="let device of devices">
+        <a routerLink="/detail/{{device.id}}">
+            <div class="d-flex flex-row alert alert-primary">
+                <div class="px-2 pt-2"><fa-icon [icon]="faMobileAlt" size="2x"></fa-icon></div>
+                <div class="px-2">
+                    <div>{{device.name}} {{device.id}}</div>
+                    <div>{{device.status}}</div>
+                </div>
+                <div class="ms-auto px-2 pt-2"><fa-icon [icon]="faInfoCircle" size="lg"></fa-icon></div>
+            </div>
+        </a>
+        
+    </div>
+
+    <!-- <ul class="list-group">
         <div *ngFor="let device of devices">
             <a routerLink="/detail/{{device.id}}">
                 <div class="row p-0 m-2  alert alert-primary">
@@ -14,7 +28,7 @@
             </a>
         </div>
     </ul>
-    
+     -->
 </div>
 
 <!-- <app-device-details [device]="selectedDevice"></app-device-details> -->

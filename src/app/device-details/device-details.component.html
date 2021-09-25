@@ -1,16 +1,15 @@
 <div *ngIf="device">
     <app-search></app-search>
-    <div>
-        <div>
+    <div class="d-flex flex-row">
+        <div class="p-2">
+            <app-related-devices></app-related-devices>
+        </div>
+        <div class="p-2">
             <h2>Details: {{device.name}} {{device.id}}</h2>
             <div>Status: {{device.status}}</div>
             <div>Temperature: {{device.temperature}} Celcius</div>
             <div>Usage:</div>
             <img src="../../assets/barchart.PNG"/>
         </div>
-        <app-related-devices></app-related-devices>
     </div>
 </div>
-<nav>
-    <a routerLink="/devices">Go Back</a>
-</nav>

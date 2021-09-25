@@ -1,5 +1,7 @@
 <div class="container-fluid">
-    <fa-icon [icon]="faSearch" (click)="onReload()"></fa-icon>
-    <input type="search" id="site-search">
-    <span (click)="onCancel()">Cancel</span>
+    <div class="d-flex flex-row">
+        <div class="p-2"><fa-icon [icon]="faSearch" (click)="onReload()"></fa-icon></div>
+        <div class="p-2"><input type="search" id="site-search"></div>
+        <div class="p-2"><span (click)="onCancel()">Cancel</span></div>
+    </div>
 </div>
