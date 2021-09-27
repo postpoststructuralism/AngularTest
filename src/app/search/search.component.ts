@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-// import { ActivatedRoute } from '@angular/router';
-// import { Location } from '@angular/common';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FilterPipe } from '../pipes/filter.pipe';
 
@@ -10,27 +8,21 @@ import { FilterPipe } from '../pipes/filter.pipe';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  
   faSearch = faSearch;
   searchText = '';
 
-  constructor(
-    private filterPipe: FilterPipe) { }
+
+  @Input() valueInParentComponent: string;
+  @Output() onValueInParentComponentChanged = new EventEmitter<string>();
+
+  constructor(private filterPipe: FilterPipe) { }
 
   ngOnInit(): void {
   }
 
-  onGoBack(): void {
-    //this.location.back();
-    alert("go back");
-  }
-
-  onGoForward(): void {
-    //this.location.back();
-    alert("go forward");
-  }
-
-  onReload(): void {
-    alert("reload");
+  onChange(){
+    this.onValueInParentComponentChanged.emit(this.searchText);
   }
 
   onCancel() : void {

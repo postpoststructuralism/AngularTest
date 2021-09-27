@@ -8,7 +8,8 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><fa-icon [icon]="faSearch"></fa-icon></span>
                         </div>
-                        <input id="searchBox" type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search">
+                        <input id="searchBox" type="text" [(ngModel)]="searchText"  
+                            (ngModelChange)="onChange()" class="form-control" placeholder="Search">
                      </div>
                    </div>
             </div>

@@ -1,16 +1,19 @@
-<div *ngIf="device">
-    <div class="d-flex flex-row flex-wrap">
-        <div class="p-2 flex-fill">
-            <!-- <app-related-devices></app-related-devices> -->
-            <h2>Related Devices</h2>
-            <app-device-list></app-device-list>
+<div class="container-fluid devices">
+    <app-search></app-search>
+    <div *ngIf="device">
+        <div class="d-flex flex-row flex-wrap">
+            <div class="p-2 flex-fill">
+                <!-- <app-related-devices></app-related-devices> -->
+                <h2>Related Devices</h2>
+                <app-device-list></app-device-list>
+            </div>
+            <div class="p-2 flex-fill">
+                <h2>Details: {{device.name}}</h2>
+                <div>Status: {{device.deviceStatus.name}}</div>
+                <div>Temperature: {{device.temperature}} Celcius</div>
+                <div>Usage:</div>
+                <img src="../../assets/barchart.PNG"/>
+            </div>
         </div>
-        <div class="p-2 flex-fill">
-            <h2>Details: {{device.name}}</h2>
-            <div>Status: {{device.deviceStatus.name}}</div>
-            <div>Temperature: {{device.temperature}} Celcius</div>
-            <div>Usage:</div>
-            <img src="../../assets/barchart.PNG"/>
-        </div>
-    </div>
+    </div>    
 </div>

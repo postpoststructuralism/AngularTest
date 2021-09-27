@@ -10,6 +10,7 @@ import { RelatedDevicesComponent } from './related-devices/related-devices.compo
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { DeviceListComponent } from './device-list/device-list.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DeviceListComponent } from './device-list/device-list.component';
     SearchComponent,
     RelatedDevicesComponent,
     FilterPipe,
-    DeviceListComponent
+    DeviceListComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

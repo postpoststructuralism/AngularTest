@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Device } from '../device';
 import { DeviceService } from '../device.service';
 import { FilterPipe } from '../pipes/filter.pipe';
@@ -7,7 +7,6 @@ import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import { faTabletAlt } from '@fortawesome/free-solid-svg-icons';
-import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-device',
@@ -23,13 +22,19 @@ export class DeviceComponent implements OnInit {
   faDesktop = faDesktop;
   faTabletAlt = faTabletAlt;
   searchText = '';
+  valueInParentComponent = "";
 
   constructor(
-    private deviceService: DeviceService,
+    private deviceService: DeviceService, 
     private filterPipe: FilterPipe) { }
 
+  
   ngOnInit(): void {
     this.getDevices();
+  }
+
+  onValueInParentComponentChanged(value: string) {
+    this.searchText = value;
   }
 
   getDevices(): void {

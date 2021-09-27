@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Device } from '../device';
 import { DeviceService } from '../device.service';
 import { FilterPipe } from '../pipes/filter.pipe';
@@ -23,12 +23,22 @@ export class DeviceListComponent implements OnInit {
   faTabletAlt = faTabletAlt;
   searchText = '';
 
+  @Input() messageFromSearchComponent: string;
+
   constructor(
     private deviceService: DeviceService,
     private filterPipe: FilterPipe) { }
 
+   
   ngOnInit(): void {
     this.getDevices();
+  }
+
+
+
+  onValueInParentComponentChanged(value: string) {
+    this.searchText = value;
+    alert("device-list");
   }
 
   getDevices(): void {
