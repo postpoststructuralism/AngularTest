@@ -1,5 +1,5 @@
 <div class=" flex-gap">    
-    <div *ngFor="let device of devices | appFilter: searchText">
+    <div *ngFor="let device of devices | appFilter: message">
         <div routerLink="/detail/{{device.id}}">
             
                 <div class="d-flex flex-row grey-background">

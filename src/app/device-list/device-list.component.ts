@@ -23,20 +23,21 @@ export class DeviceListComponent implements OnInit {
   faTabletAlt = faTabletAlt;
   searchText = '';
 
+  message: string;
+
   @Input() messageFromSearchComponent: string;
 
   constructor(
     private deviceService: DeviceService,
-    private filterPipe: FilterPipe) { }
+    public filterPipe: FilterPipe) { }
 
    
   ngOnInit(): void {
     this.getDevices();
+    this.deviceService.currentMessage.subscribe(searchText => this.message = searchText);
   }
 
-
-
-  onValueInParentComponentChanged(value: string) {
+  onSearchTermChange(value: string) {
     this.searchText = value;
     alert("device-list");
   }

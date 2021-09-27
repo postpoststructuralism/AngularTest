@@ -24,17 +24,21 @@ export class DeviceComponent implements OnInit {
   searchText = '';
   valueInParentComponent = "";
 
+  message: string;
+
   constructor(
     private deviceService: DeviceService, 
     private filterPipe: FilterPipe) { }
-
   
   ngOnInit(): void {
     this.getDevices();
+    this.deviceService.currentMessage.subscribe(message => this.message = message);
   }
 
   onValueInParentComponentChanged(value: string) {
     this.searchText = value;
+    //this.newMessage();
+    this.deviceService.changeMessage(this.searchText);
   }
 
   getDevices(): void {
@@ -44,5 +48,9 @@ export class DeviceComponent implements OnInit {
   clearSearchText(): void {
     this.searchText = "";
     
+  }
+
+  newMessage() {
+    this.deviceService.changeMessage(this.searchText);
   }
 }
