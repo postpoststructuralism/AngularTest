@@ -5,7 +5,6 @@ import { RelatedDevice } from "./related-device";
 export interface Device {
     id: number;
     name: string;
-    //status: string;
     temperature: number;
     deviceStatusId: number;
     deviceStatus: DeviceStatus;

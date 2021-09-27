@@ -9,6 +9,7 @@ import { SearchComponent } from './search/search.component';
 import { RelatedDevicesComponent } from './related-devices/related-devices.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { DeviceListComponent } from './device-list/device-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     DeviceDetailsComponent,
     SearchComponent,
     RelatedDevicesComponent,
-    FilterPipe
+    FilterPipe,
+    DeviceListComponent
   ],
   imports: [
     BrowserModule,

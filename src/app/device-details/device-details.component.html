@@ -1,9 +1,9 @@
 <div *ngIf="device">
-    <app-search></app-search>
     <div class="d-flex flex-row flex-wrap">
         <div class="p-2 flex-fill">
             <!-- <app-related-devices></app-related-devices> -->
-            <app-device></app-device>
+            <h2>Related Devices</h2>
+            <app-device-list></app-device-list>
         </div>
         <div class="p-2 flex-fill">
             <h2>Details: {{device.name}}</h2>

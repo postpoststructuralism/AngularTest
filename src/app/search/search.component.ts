@@ -13,8 +13,6 @@ export class SearchComponent implements OnInit {
   faSearch = faSearch;
   searchText = '';
 
-  //private location : Location;
-
   constructor(
     private filterPipe: FilterPipe) { }
 

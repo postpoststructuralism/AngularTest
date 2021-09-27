@@ -7,14 +7,13 @@ import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import { faTabletAlt } from '@fortawesome/free-solid-svg-icons';
-import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-device',
-  templateUrl: './device.component.html',
-  styleUrls: ['./device.component.css']
+  selector: 'app-device-list',
+  templateUrl: './device-list.component.html',
+  styleUrls: ['./device-list.component.css']
 })
-export class DeviceComponent implements OnInit {
+export class DeviceListComponent implements OnInit {
 
   devices: Device[] = [];
   faInfoCircle = faInfoCircle;
