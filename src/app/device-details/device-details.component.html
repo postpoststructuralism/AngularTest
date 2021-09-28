@@ -2,13 +2,13 @@
     <app-search></app-search> 
     <div *ngIf="device">
         <div class="d-flex flex-row flex-wrap">
-            <div class="p-2 flex-fill">
-                <h2>Related Devices</h2>
+            <div class="p-2 flex-fill ">
+                <div class="d-flex flex-row grey-background"><h2>Related Devices</h2></div>
                 <app-related-devices></app-related-devices>
-                <!-- <app-device-list></app-device-list> -->
             </div>
+            <br/>
             <div class="p-2 flex-fill">
-                <h2>Details: {{device.name}}</h2>
+                <div class="d-flex flex-row grey-background"><h2>Details: {{device.name}}</h2></div>
                 <div>Status: {{device.deviceStatus.name}}</div>
                 <div>Temperature: {{device.temperature}} Celcius</div>
                 <div>Usage:</div>
