@@ -1,6 +1,6 @@
 <div class="container-fluid devices">
     <app-search  
-        (onValueInParentComponentChanged)="onValueInParentComponentChanged($event)"
+        (onSearchTermsSubmitted)="onSearchTermsSubmitted($event)"
         [valueInParentComponent]="valueInParentComponent">
     </app-search> 
     <app-device-list></app-device-list>

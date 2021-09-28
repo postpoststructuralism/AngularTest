@@ -39,7 +39,6 @@ export class DeviceListComponent implements OnInit {
 
   onSearchTermChange(value: string) {
     this.searchText = value;
-    alert("device-list");
   }
 
   getDevices(): void {

@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   message: string;
 
   @Input() valueInParentComponent: string;
-  @Output() onValueInParentComponentChanged = new EventEmitter<string>();
+  @Output() onSearchTermsSubmitted = new EventEmitter<string>();
 
   constructor(private filterPipe: FilterPipe, 
     private deviceService: DeviceService) { }
@@ -26,11 +26,11 @@ export class SearchComponent implements OnInit {
   }
 
   onChange(){
-    //alert("Search onChange()");
-    this.onValueInParentComponentChanged.emit(this.searchText);
+    this.onSearchTermsSubmitted.emit(this.searchText);
   }
 
   onCancel() : void {
-    alert("cancel");
+   this.searchText = "";
+   this.onChange();
   }
 }

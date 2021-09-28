@@ -20,14 +20,12 @@ export class DeviceService {
   }
 
   getDevice(id: number): Observable<Device> {
-    // TODO: add error handling for null id
     const device = DEVICES.find(d => d.id === id)!;
     
     return of(device);
   }
 
   changeMessage(message: string) {
-    //alert("changeMesssage: " + message);
     this.messageSource.next(message);
   }
 }

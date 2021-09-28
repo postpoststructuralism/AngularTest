@@ -35,9 +35,8 @@ export class DeviceComponent implements OnInit {
     this.deviceService.currentMessage.subscribe(message => this.message = message);
   }
 
-  onValueInParentComponentChanged(value: string) {
+  onSearchTermsSubmitted(value: string) {
     this.searchText = value;
-    //this.newMessage();
     this.deviceService.changeMessage(this.searchText);
   }
 
