@@ -1,5 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Device } from '../device';
+import { DeviceService } from '../device.service';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faDesktop } from '@fortawesome/free-solid-svg-icons';
+import { faTabletAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-related-devices',
@@ -9,10 +15,22 @@ import { Device } from '../device';
 export class RelatedDevicesComponent implements OnInit {  
   @Input() device?: Device;
 
-  constructor() { }
+  faInfoCircle = faInfoCircle;
+  faMobileAlt = faMobileAlt;
+  faDesktop = faDesktop;
+  faTabletAlt = faTabletAlt;
+  
+  constructor( 
+    private deviceService: DeviceService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.device;
+    this.getDevice();
+  }
+
+  getDevice(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.deviceService.getDevice(id).subscribe(device => this.device = device);
   }
 
 }

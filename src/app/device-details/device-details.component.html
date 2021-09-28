@@ -1,11 +1,11 @@
 <div class="container-fluid devices">
-    <app-search></app-search>
+    <app-search></app-search> 
     <div *ngIf="device">
         <div class="d-flex flex-row flex-wrap">
             <div class="p-2 flex-fill">
-                <!-- <app-related-devices></app-related-devices> -->
                 <h2>Related Devices</h2>
-                <app-device-list></app-device-list>
+                <app-related-devices></app-related-devices>
+                <!-- <app-device-list></app-device-list> -->
             </div>
             <div class="p-2 flex-fill">
                 <h2>Details: {{device.name}}</h2>

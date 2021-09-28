@@ -1,0 +1,18 @@
+.device-icon {
+    font-size: 30px;
+}
+
+.info-icon {
+    font-size: 25px;
+}
+
+.text-right {
+    float: right;
+}
+
+.item {
+	flex-basis: 60px;
+	flex-grow: 0;
+	flex-shrink: 0;
+    justify-content: center;
+}
