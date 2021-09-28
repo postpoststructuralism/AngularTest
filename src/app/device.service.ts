@@ -1,31 +1,40 @@
 import { Injectable } from '@angular/core';
 import { Device } from './device';
-import { DEVICES } from './mock-devices';
 import { Observable, BehaviorSubject, of } from 'rxjs';
 import { MessageService } from './message.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DeviceService {
 
+  //private baseUrl =  "https://localhost:44331/api/devices";  //DEV
+  private baseUrl = "https://devicesapi20210927055518.azurewebsites.net/api/devices"; // PROD
+
   private messageSource = new BehaviorSubject<string>("");
   currentMessage = this.messageSource.asObservable();
 
-  constructor(private messageService: MessageService) { }
+  constructor(
+    private http: HttpClient,
+    private messageService: MessageService) { }
 
   getDevices(): Observable<Device[]> {
-    const devices = of(DEVICES);
+    var devices = this.http.get<Device[]>(this.baseUrl);
     return devices;
   }
 
   getDevice(id: number): Observable<Device> {
-    const device = DEVICES.find(d => d.id === id)!;
-    
-    return of(device);
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Device>(url);
   }
 
   changeMessage(message: string) {
     this.messageSource.next(message);
+  }
+
+  private log(message: string) {
+    this.messageService.add(`DeviceService: $(message)`);
   }
 }

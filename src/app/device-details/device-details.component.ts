@@ -26,19 +26,6 @@ export class DeviceDetailsComponent implements OnInit {
   getDevice(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.deviceService.getDevice(id).subscribe(device => this.device = device);
-
-    if (this.device !== undefined) {
-      console.log("device is defined.");
-      if (this.device.relatedDevices !== undefined) {
-        console.log("releatedDevices are defined.");
-        if (this.device.relatedDevices.length === 0) {
-          console.log("but it's empty");
-          this.device.relatedDevices = [];
-        }
-      }
-    }
-
-    //console.log(this.device);
   }
 
   goBack(): void {
