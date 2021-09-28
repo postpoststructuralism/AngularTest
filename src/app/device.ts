@@ -7,8 +7,8 @@ export interface Device {
     name: string;
     temperature: number;
     deviceStatusId: number;
-    deviceStatus: DeviceStatus;
+    deviceStatusName: string;
     deviceTypeId: number;
-    deviceType: DeviceType;
+    deviceTypeName: string;
     relatedDevices: RelatedDevice[];
   }
