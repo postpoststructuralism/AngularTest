@@ -15,5 +15,5 @@ Angular app hosted on Azure, prepared as a part of a job competition.
   > ng s -o
 3. This will launch a browser and navigate to the deployed version of the app.
 4. The app can be set to target the local version of the the Web API project by:
-  - Navigating to ./DevicesApp/src/app/device.service.ts
-  - Then commenting out the current baseUrl variable and uncommenting the other one.
+   - Navigating to ./DevicesApp/src/app/device.service.ts
+   - Then commenting out the current baseUrl variable and uncommenting the other one.
