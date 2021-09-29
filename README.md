@@ -11,7 +11,7 @@ Angular app hosted on Azure, prepared as a part of a job competition.
 2. Run the following commands: 
   > - git clone https://github.com/postpoststructuralism/DevicesApp.git
   > - cd DevicesApp
-  > - npm update 
+  > - npm install --save-dev @angular-devkit/build-angular
   > - ng s -o
 3. This will launch a browser and navigate to the deployed version of the app.
 4. The app can be set to target the local version of the the Web API project by:
