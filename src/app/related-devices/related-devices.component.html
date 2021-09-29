@@ -1,4 +1,4 @@
-<div class="flex-gap" *ngIf="device.relatedDevices.length > 0">
+<div class="flex-gap" *ngIf="device?.relatedDevices?.length > 0">
     <div *ngFor="let relatedDevice of device.relatedDevices">
         <div routerLink="/detail/{{device.id}}">
             <div class="d-flex flex-row grey-background">
