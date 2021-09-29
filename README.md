@@ -10,8 +10,11 @@ Angular app hosted on Azure, prepared as a part of a job competition.
 1. Open a command prompt on your local system and navigate to the directory where the application will be run.
 2. Run the following commands: 
   > git clone https://github.com/postpoststructuralism/DevicesApp.git
+  > 
   > cd DevicesApp
+  > 
   > npm update
+  > 
   > ng s -o
 3. This will launch a browser and navigate to the deployed version of the app.
 4. The app can be set to target the local version of the the Web API project by:
