@@ -6,7 +6,7 @@ Angular app hosted on Azure, prepared as a part of a job competition.
 1. The app is currently being hosted on Azure and is available here: [DevicesApp](https://purple-rock-0c229b210.azurestaticapps.net/)
 2. The app is set to pull from the the API project that is also being hosted in Azure.
 
-## Local Testing Instructions
+## Running the App Locally
 1. Open a command prompt on your local system and navigate to the directory where the application will be run.
 2. Run the following commands: 
   > - git clone https://github.com/postpoststructuralism/DevicesApp.git
