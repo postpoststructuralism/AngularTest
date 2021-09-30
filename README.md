@@ -17,3 +17,4 @@ Angular app hosted on Azure, prepared as a part of a job competition.
 4. The app can be set to target the local version of the the Web API project by:
    - Navigating to ./DevicesApp/src/app/device.service.ts
    - Then commenting out the current baseUrl variable and uncommenting the other one.
+   - Then running the DevicesAPi project from Visual Studio.
