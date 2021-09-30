@@ -3,7 +3,7 @@
 Angular app hosted on Azure, prepared as a part of a job competition.
 
 ## Testing Instructions
-1. The app is currently being hosted on Azure and is available here: [DevicesApp](https://purple-rock-0c229b210.azurestaticapps.net/)
+1. The app is currently being hosted on Azure (free-tier: sorry for slow page loads) and is available here: [DevicesApp](https://purple-rock-0c229b210.azurestaticapps.net/)
 2. The app is set to pull from the the API project that is also being hosted in Azure.
 
 ## Running the App Locally
